@@ -6,15 +6,17 @@ const Funds = () => {
     <>
       <div className="funds">
         <p>Instant, zero-cost fund transfers with UPI </p>
-        <Link className="btn btn-green">Add funds</Link>
-        <Link className="btn btn-blue">Withdraw</Link>
+        <Link to="#" className="btn btn-green">
+          Add funds
+        </Link>
+        <Link to="#" className="btn btn-blue">
+          Withdraw
+        </Link>
       </div>
 
       <div className="row">
         <div className="col">
-          <span>
-            <p>Equity</p>
-          </span>
+          <p>Equity</p>
 
           <div className="table">
             <div className="data">
@@ -35,7 +37,7 @@ const Funds = () => {
               <p>4,043.10</p>
             </div>
             <div className="data">
-              <p>Opening Balance</p>
+              <p>Closing Balance</p>
               <p>3736.40</p>
             </div>
             <div className="data">
