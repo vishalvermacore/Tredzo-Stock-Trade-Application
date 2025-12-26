@@ -58,7 +58,7 @@ export const watchlist = [
 // holdings
 export const holdings = [
   {
-    name: "BHARTIARTL",
+    name: "BHARTIARTEL",
     qty: 2,
     avg: 538.05,
     price: 541.15,

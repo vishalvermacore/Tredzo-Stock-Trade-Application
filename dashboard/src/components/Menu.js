@@ -10,8 +10,8 @@ const Menu = () => {
     setSelectedMenu(index);
   };
 
-  const handleProfileClick = (index) => {
-    setIsProfileDropdownOpen(!isProfileDropdownOpen);
+  const handleProfileClick = () => {
+    setIsProfileDropdownOpen((prev) => !prev);
   };
 
   const menuClass = "menu";
@@ -19,7 +19,7 @@ const Menu = () => {
 
   return (
     <div className="menu-container">
-      <img src="logo.png" alt="App Logo" style={{ width: "50px" }} />
+      <img src="logo.png" alt="App Logo" style={{ width: "30px" }} />
 
       <div className="menus">
         <ul>
@@ -70,7 +70,7 @@ const Menu = () => {
           <li>
             <Link
               style={{ textDecoration: "none" }}
-              to="funds"
+              to="/funds"
               onClick={() => handleMenuClick(4)}
             >
               <p className={selectedMenu === 4 ? activeMenuClass : menuClass}>
@@ -82,9 +82,9 @@ const Menu = () => {
             <Link
               style={{ textDecoration: "none" }}
               to="/apps"
-              onClick={() => handleMenuClick(6)}
+              onClick={() => handleMenuClick(5)}
             >
-              <p className={selectedMenu === 6 ? activeMenuClass : menuClass}>
+              <p className={selectedMenu === 5 ? activeMenuClass : menuClass}>
                 Apps
               </p>
             </Link>
@@ -94,6 +94,13 @@ const Menu = () => {
         <div className="profile" onClick={handleProfileClick}>
           <div className="avatar">ZU</div>
           <p className="username">USERID</p>
+          {isProfileDropdownOpen && (
+            <div className="profile-dropdown">
+              <p>Profile</p>
+              <p>Settings</p>
+              <p>Logout</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
